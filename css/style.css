@@ -32,13 +32,14 @@ header {
     display: flex;
     flex-direction: column;
 }
+/* step5*/
 a:link {
-    color:black;
+    color:blue;
 }
 a:visited {
-    color: red;
+    color: blue;
 }
-/* step5*/
+
 
 
 /* step6 */
@@ -52,11 +53,13 @@ a:visited {
 /* step7 */
 .card {
     flex-basis: 450px;
+    border-radius: 50px 50px 0px 0px;
 }
 /* step8 */
 .pricing {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -100,7 +103,16 @@ a:visited {
     }
 
     /* step 13 */
+    body > header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
 
+    .about {
+        margin-top: 90px;
+    }
 }
 /* step 14 */
 @media (prefers-reduced-motion: reduce) {
@@ -110,23 +122,26 @@ a:visited {
 }
 
 
-@media print and (orientation:portrait) {
+@media print {
     /* step 15, 16 */
     body {
         font-family: Arial, Helvetica;
         background: none;
     }
     /* step 17 */
+    nav {
+        width: 100%;
+    }
     .nav_links {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        gap: 180px;
     }
     /* step 18 */
     .pricing {
         display: flex;
         flex-direction: row;
+        flex-wrap:nowrap;
         align-items: flex-end; 
     }
     /* step 19 */
