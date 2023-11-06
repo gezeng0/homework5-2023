@@ -1,0 +1,149 @@
+/* step1 */
+@keyframes logoAn {
+    from {
+      width: 25px;
+      opacity: 0;
+    }
+    to {
+      width: 475px;
+      opacity: 1;
+    }
+  }
+#logo {
+    animation: logoAn 5s;
+}
+
+/* Step 2 */
+body {
+    font-family: "Poppins", serif;
+    background-image: url('../images/concrete_seamless.png');
+    background-color: #f1f1f1;
+}
+
+/* step 3 use inspect to figure out flex preperty first, then put in the code*/
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* step4 */
+.nav_links {
+    display: flex;
+    flex-direction: column;
+}
+a:link {
+    color:black;
+}
+a:visited {
+    color: red;
+}
+/* step5*/
+
+
+/* step6 */
+.card > header {
+    background-color: #288088;
+    border: solid 2px #45ADAD;
+    padding: 20px 0px; 
+    border-radius: 50px 50px 0px 0px;
+}
+
+/* step7 */
+.card {
+    flex-basis: 450px;
+}
+/* step8 */
+.pricing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* step9 */
+.gallery img{
+    border: 10px solid #50C7C7; 
+    margin: 10px; 
+    width: 300px;
+}
+
+/* step10 */
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* step11 */
+@media screen and (min-width: 900px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav_links {
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* step 12 */   
+    .pricing {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card {
+        flex-basis: 275px;
+    }
+
+    /* step 13 */
+
+}
+/* step 14 */
+@media (prefers-reduced-motion: reduce) {
+    #logo {
+        animation: none;
+    }
+}
+
+
+@media print and (orientation:portrait) {
+    /* step 15, 16 */
+    body {
+        font-family: Arial, Helvetica;
+        background: none;
+    }
+    /* step 17 */
+    .nav_links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 180px;
+    }
+    /* step 18 */
+    .pricing {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end; 
+    }
+    /* step 19 */
+    .card {
+        border: solid 2px #45ADDD;
+        flex-basis: 325px;
+    }
+    /* step20 */
+    #gallery {
+        display: none;
+    }
+    .gallery {
+        display: none;
+    }
+
+    /* step21 */
+    .card li:nth-child(2)::after {
+        content: "\1F44D";
+    }
+}
